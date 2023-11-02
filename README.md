@@ -11,8 +11,8 @@ Follow these steps to get the project up and running on your local machine using
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/sreality-2.0.git
-   cd sreality-2.0
+      git clone https://github.com/your-username/sreality-2.0.git
+      cd sreality-2.0
    ```
 2. **Build Docker Images:**
 - Build the backend image:
@@ -22,19 +22,19 @@ Follow these steps to get the project up and running on your local machine using
   ```
 - Build the scraper image:
    ```bash
-   cd scrape
-   docker build -t sreality-scrape .
+      cd scrape
+      docker build -t sreality-scrape .
    ```
 - Build the frontend image:
    ```bash
-   cd frontend
-   docker build -t sreality-frontend .
+      cd frontend
+      docker build -t sreality-frontend .
    ```
 3. **Run the Application:**
 - Go back to the root directory and run Docker Compose:
   ```bash
-  cd ..
-  docker compose up
+     cd ..
+     docker compose up
   ```
 ## Access the Application
 
