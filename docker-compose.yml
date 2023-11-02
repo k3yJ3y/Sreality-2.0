@@ -1,0 +1,49 @@
+version: '3.9'
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
+    ports:
+      - '5432:5432'
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "postgres", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  scrape:
+    image: sreality-scrape
+    ports:
+      - '5001:5001'
+    depends_on:
+      - database
+    networks:
+      - app-network
+
+  backend:
+    image: sreality-backend
+    ports:
+      - '5000:5000'
+    depends_on:
+      - database
+      - scrape
+    networks:
+      - app-network
+
+  frontend:
+    image: sreality-frontend
+    ports:
+      - '8080:3000'
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
