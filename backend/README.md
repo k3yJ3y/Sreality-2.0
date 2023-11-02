@@ -21,15 +21,15 @@ Follow these steps to get the project up and running on your local machine using
     docker build -t sreality-backend .
   ```
 - Build the scraper image:
-  ```bash
-  cd scrape
-docker build -t sreality-scrape .
-```
+   ```bash
+   cd scrape
+   docker build -t sreality-scrape .
+   ```
 - Build the frontend image:
-```bash
-cd frontend
-docker build -t sreality-frontend .
-```
+   ```bash
+   cd frontend
+   docker build -t sreality-frontend .
+   ```
 3. **Run the Application:**
 - Go back to the root directory and run Docker Compose:
   ```bash
@@ -42,7 +42,7 @@ Once the containers are running, you can access the project in your web browser 
 
 ## Usage
 
-The Sreality 2.0 project is now running locally. You can view the scraped data in your web browser by visiting [http://localhost:8080](http://localhost:8080/properties).
+The Sreality 2.0 project is now running locally. You can view the scraped data in your web browser by visiting [http://localhost:8080/properties](http://localhost:8080/properties).
 
 ## Notes
 
