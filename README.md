@@ -46,7 +46,7 @@ The Sreality 2.0 project is now running locally. You can view the scraped data i
 
 ## Notes
 
-- Make sure you have Docker and Docker Compose installed on your system before running the project.
+- Make sure you have Docker installed on your system before running the project.
 
 ## Legal Notice
 
